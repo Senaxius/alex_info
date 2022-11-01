@@ -1,1 +1,113 @@
-/opt/webdev/gntp/upload.html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- html shit -->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Am Ende gewinnt Marone</title>
+  <!-- css -->
+  <link rel="stylesheet" href="styles/general.css" />
+  <link rel="stylesheet" href="styles/sidebar.css" />
+  <link rel="stylesheet" href="styles/voting.css" />
+  <link rel="stylesheet" href="styles/upload.css" />
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;500;600&display=swap"
+    rel="stylesheet">
+  <!-- active entry on sidebar -->
+  <style>
+    .li:nth-child(2) {
+      box-shadow: inset 0px 0 0 5px rgb(255, 255, 255);
+    }
+  </style>
+  <!-- JQuerry -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/browser-image-compression@2.0.0/dist/browser-image-compression.js"></script>
+</head>
+
+<body>
+  <!-- navbar -->
+  <nav class="navbar" id="navbar">
+    <ul class="icon-list">
+      <a href="index.html" class="li home">
+        <img src="svgs/home.svg" class="icon" />
+        <p class="icon-text">Startseite</p>
+      </a>
+      <a href="upload.html" class="li">
+        <img src="svgs/upload.svg" class="icon" />
+        <p class="icon-text">Hochladen</p>
+      </a>
+      <a href="vote.html" class="li">
+        <img src="svgs/vote.svg" class="icon" />
+        <p class="icon-text">Wählen</p>
+      </a>
+      <a href="ranking.html" class="li">
+        <img src="svgs/ranking.svg" class="icon" />
+        <p class="icon-text">Ranking</p>
+      </a>
+      <li class="color-change" id="color">
+        <img src="svgs/moon.svg" class="moon" id="moon" />
+        <img src="svgs/sun.svg" class="sun" id="sun" />
+      </li>
+
+    </ul>
+  </nav>
+
+  <!-- main content -->
+  <main>
+    <p class="title">Hochladen</p>
+    <p class="untertitel">Gib ein Bild und eine passende Beschreibung an</p>
+    <div class="upload-div">
+      <div class="input-div">
+        <form class="input-div" id="form">
+          <input type="file" accept="image/*" style="display: none;" id="pic_upload" onchange="loadFile(event);" />
+          <label for="pic_upload" class="pic-upload input" id="pic_upload_style">Bild hochladen</label>
+          <input type="text" class="input" placeholder="Name des Tiers" required id="pet_name" maxlength="12" />
+          <input type="text" class="input" placeholder="Eigenschaft 1" required id="info_input_1" />
+          <input type="text" class="input" placeholder="Eigenschaft 2" required id="info_input_2" />
+          <input type="text" class="input" placeholder="Eigenschaft 3" required id="info_input_3" />
+          <input type="text" class="input" placeholder="Name des Absenders" required id="person_name" />
+          <input type="submit" class="send" value="Hochladen">
+        </form>
+      </div>
+      <div class="preview-div">
+        <p class="vorschau-titel">Vorschau:</p>
+        <div class="pet">
+          <div class="pic-div">
+            <img src="svgs/nopreview.png" class="pic" id="preview_pic" />
+          </div>
+          <div class="info">
+            <div class="video-info-div">
+              <p class="name" id="preview_name">-</p>
+              <p class="beschreibung" id="info_preview_1">-</p>
+              <p class="beschreibung" id="info_preview_2">-</p>
+              <p class="beschreibung" id="info_preview_3">-</p>
+            </div>
+          </div>
+          <div class="vote-div"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- background -->
+  <div class="background-div">
+    <div class="light" id="light_background">
+      <img src="svgs/wave-l.svg" id="wave_l" class="wave-light" />
+      <div class="light-background"></div>
+    </div>
+    <div class="dark" id="dark_background">
+      <img src="svgs/wave-d.svg" id="wave_d" class="wave-dark" />
+      <div class="dark-background"></div>
+    </div>
+  </div>
+
+  <!-- scripts -->
+  <script type="text/javascript" src="scripts/sidebar.js"></script>
+  <script type="text/javascript" src="scripts/upload.js"></script>
+</body>
+
+</html>

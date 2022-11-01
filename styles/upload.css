@@ -1,0 +1,141 @@
+.upload-div {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 50% 50%;
+  grid-auto-rows: 100%;
+  z-index: 3;
+  position: relative;
+}
+.input-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: stretch;
+  padding-top: 20px;
+}
+.preview-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+.pet {
+  width: 550px;
+  height: 450px;
+}
+.input {
+  width: 70%;
+  box-sizing: border-box;
+  margin-top: 8px;
+  text-align: center;
+  font-size: 22px;
+  font-family: 'Montserrat', sans-serif;
+  border: 3px solid;
+  border-radius: 15px;
+  padding: 6px;
+  box-shadow: 0 0 10px #000000;
+  border-color: var(--invalid);
+  background-color: var(--background-color);
+  color: var(--text);
+  transition: all var(--speed);
+}
+.pic-upload {
+  display: inline-block;
+  vertical-align: middle;
+  color: var(--text);
+  padding: 4px 0 0 0;
+}
+.input:focus {
+  width: 80%;
+}
+.input:valid {
+  border: 3px solid var(--valid);
+}
+.input:invalid .send {
+  background-color: var(--inactive);
+}
+.send {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+  width: 42%;
+  box-sizing: border-box;
+  padding: 10px;
+  border: none;
+  background-color: white;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all var(--speed);
+}
+.send:hover {
+  width: 70%;
+  background-color: var(--valid);
+}
+.send:focus {
+  width: 70%;
+  background-color: var(--valid);
+}
+.input:invalid ~ .send {
+  background-color: var(--inactive);
+  cursor: default;
+}
+.input:invalid ~ .send:hover {
+  width: 42%;
+}
+.input:invalid ~ .send:focus {
+  width: 42%;
+}
+.vorschau-titel {
+  color: var(--text);
+  width: 100%;
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+@media only screen and (max-width: 700px) {
+  .hintergrund-div {
+    height: 80%;
+    z-index: 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .upload-div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    margin-top: 20px;
+  }
+  .preview-div {
+    width: 95%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: flex-start;
+  }
+  .pet {
+    margin-bottom: 30px;
+  }
+  .input {
+    height: 55px;
+    width: 80%;
+  }
+  .untertitel {
+    margin-bottom: 0px;
+  }
+  .input-div {
+    padding: 0;
+  }
+}
+.pet:hover {
+  margin: 0px;
+}

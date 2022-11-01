@@ -1,0 +1,27 @@
+:root {
+  --background-color: #000000;
+  --navbar:           #ffffff4d;
+  --navbar-hover:     #ffffffa1;
+  --text:             #ffffff;
+  --text-secondary:   #a3a3a3;
+  --text2:             #000000;
+  --text2-secondary:   #2b2b2b;
+
+  --article: #ffffff79;
+
+  --invalid: #a10fdb;
+  --valid: #22dbcc;
+  --active: #11ebaa;
+  --inactive: #7e7e7e;
+  --first: #1fe5ffd0;
+  --second: #3055fcde;
+  --third: #f940ffc2;
+
+  --bar: #6d6d6d;
+  --bar1-start: #00d9ff;
+  --bar1-end: #88e3ffe3;
+  --bar2-start: #0043fb;
+  --bar2-end: hsl(219, 100%, 67%);
+  --bar3-start: #e32ef3;
+  --bar3-end: #e990ff;
+}
